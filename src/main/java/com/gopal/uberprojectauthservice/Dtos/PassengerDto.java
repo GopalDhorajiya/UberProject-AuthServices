@@ -1,5 +1,6 @@
 package com.gopal.uberprojectauthservice.Dtos;
 
+import com.gopal.uberprojectauthservice.models.Passenger;
 import lombok.*;
 
 import java.util.Date;
@@ -23,4 +24,14 @@ public class PassengerDto {
     private String name;
 
     private Date createdAt;
+
+    public static PassengerDto from(Passenger passenger) {
+        return PassengerDto.builder().email(passenger.getEmail())
+                .password(passenger.getPassword())
+                .phoneNumber(passenger.getPhoneNumber())
+                .id(passenger.getId())
+                .name(passenger.getName())
+                .createdAt(passenger.getCreatedAt())
+                .build();
+    }
 }

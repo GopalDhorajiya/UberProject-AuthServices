@@ -1,4 +1,9 @@
 package com.gopal.uberprojectauthservice.Services;
 
-public class AuthService {
+import com.gopal.uberprojectauthservice.Dtos.PassengerDto;
+import com.gopal.uberprojectauthservice.Dtos.PassengerSignupRequestDto;
+
+public interface AuthService {
+
+    PassengerDto signupPassenger(PassengerSignupRequestDto passengerSignupRequestDto);
 }
